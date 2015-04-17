@@ -1,0 +1,23 @@
+{
+    "name": "simplegal",
+    "description": "Simple gallery",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {},
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/veox/simplegal.git"
+    },
+    "homepage": "https://github.com/veox/simplegal",
+    "bugs": {
+	"url": "https://github.com/veox/simplegal/issues"
+    },
+    "authors": [
+	{
+	    "name": "Noel Maersk",
+	    "email": "see github",
+	    "url": "https://github.com/veox"
+	}
+    ],
+    "license": "GPL-3.0"
+}
