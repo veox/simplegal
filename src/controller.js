@@ -5,8 +5,14 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
     $scope.image = getImagePath($scope.date);
 
     function getImagePath(date) {
-	var image = 'img' + '/' + date.getFullYear() + '/' + (date.getMonth()+1) + '/' +
-	    + date.getFullYear() + (date.getMonth()+1) + date.getDate() + '.jpeg';
+	date = date.toISOString();
+	date = date.split("T")[0];
+	date = date.split("-");
+	var y = date[0];
+	var m = date[1];
+	var d = date[2];
+	var image = 'img' + '/' + y + '/' + m + '/' +
+	    + y + m + d + '.jpeg';
 	return image;
     };
 
