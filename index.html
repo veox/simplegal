@@ -10,8 +10,16 @@
     <div class="container">
       <h1>Das Titel</h1>
       <div ng-controller="galCtrl">
-	<form ng-submit="updateImage()">
-	  <input type="text" ng-model="date">
+	<form name="inputForm" ng-submit="updateImage()">
+	  <input name="date" type="date" ng-model="date" placeholder="yyyy-MM-dd" min="2014-01-01" max="2014-12-31" required />
+	  <div role="alert">
+	    <span class="error" ng-show="inputForm.date.$error.required">
+	      Date is required!
+	    </span>
+	    <span class="error" ng-show="inputForm.date.$error.date">
+	      Not a valid date!
+	    </span>
+	  </div>
 	</form>
 	<img ng-src="{{image}}">
       </div>
