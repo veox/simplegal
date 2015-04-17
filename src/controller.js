@@ -1,7 +1,8 @@
 var simplegalApp = angular.module('simplegalApp', []);
 
 simplegalApp.controller('galCtrl', ['$scope', function($scope) {
-    $scope.date = new Date(Date.UTC(2014, 11, 31)); // hack to disregard timezone
+    // hack to disregard timezone
+    $scope.date = new Date(Date.UTC(2014, 11, 31));
     $scope.image = getImagePath($scope.date);
 
     function getImagePath(date) {
@@ -17,6 +18,8 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
     };
 
     $scope.updatePage = function() {
+	// TODO: sanitise input
+	// TODO: check if image exists
 	$scope.image = getImagePath($scope.date);
     }
 }]);
