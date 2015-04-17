@@ -7,12 +7,14 @@
     <script src="src/controller.js"></script>
   </head>
   <body>
-    <h1>Das Titel</h1>
-    <div ng-controller="galCtrl">
-      <form ng-submit="updateImage()">
-	<input type="text" ng-model="date">
-      </form>
-      <img id="image" ng-src="{{image}}">
+    <div class="container">
+      <h1>Das Titel</h1>
+      <div ng-controller="galCtrl">
+	<form ng-submit="updateImage()">
+	  <input type="text" ng-model="date">
+	</form>
+	<img ng-src="{{image}}">
+      </div>
     </div>
   </body>
 </html>

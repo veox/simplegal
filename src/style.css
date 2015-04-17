@@ -1,8 +1,22 @@
-body {
-    padding-top: 10px;
+div.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+div.container h1 {
+    text-align: center;
 }
 
-#image {
+div.container div form input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.container img {
+    display: block;
+    margin: auto;
+    margin: auto;
     max-height: 600px;
     max-width: 800px;
     padding: 10px;
