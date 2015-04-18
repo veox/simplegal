@@ -1,5 +1,17 @@
 var simplegalApp = angular.module('simplegalApp', []);
 
+simplegalApp.directive('errSrc', function() {
+    return {
+	link: function(scope, element, attrs) {
+	    element.bind('error', function() {
+		if (attrs.src != attrs.errSrc) {
+		    attrs.$set('src', attrs.errSrc);
+		}
+	    });
+	}
+    }
+});
+
 simplegalApp.controller('galCtrl', ['$scope', function($scope) {
     // double date hack to disregard timezone
     $scope.date = new Date(Date.UTC(2014, 11, 31));
