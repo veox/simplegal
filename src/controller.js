@@ -29,21 +29,19 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
 	return image;
     };
 
+    function changeDate(days) {
+	$scope.date.setUTCDate($scope.date.getUTCDate() + days);
+	$scope.updatePage();
+    }
+    $scope.changeDate = function(days) {
+	changeDate(days);
+    }
+    
     $scope.updatePage = function() {
 	// TODO: sanitise input
 	// TODO: check if image exists
 	// hack to update input text if button is pressed
 	$scope.date = new Date($scope.date);
 	$scope.image = getImagePath($scope.date);
-    }
-
-    $scope.prevDate = function() {
-	$scope.date.setUTCDate($scope.date.getUTCDate()-1);
-	$scope.updatePage();
-    }
-    
-    $scope.nextDate = function() {
-    	$scope.date.setUTCDate($scope.date.getUTCDate()+1);
-	$scope.updatePage();
     }
 }]);

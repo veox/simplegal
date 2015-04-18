@@ -11,9 +11,9 @@
       <h1>Das Titel</h1>
       <form name="inputForm">
 	<button class="hidden" ng-click="updatePage()" />
-	<button ng-click="prevDate()">&lt;</button>
+	<button ng-click="changeDate(-1)">&lt;</button>
 	<input name="date" type="date" ng-model="date" placeholder="yyyy-MM-dd" min="2014-01-01" max="2018-12-31" required />
-	<button ng-click="nextDate()">&gt;</button>
+	<button ng-click="changeDate(+1)">&gt;</button>
       </form>
       <img ng-src="{{image}}" err-src="404.jpeg">
     </div>
