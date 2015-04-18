@@ -7,22 +7,22 @@
     <script src="src/controller.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div ng-controller="galCtrl">
-	<h1>Das Titel</h1>
-	<form name="inputForm" ng-submit="updatePage()">
-	  <input name="date" type="date" ng-model="date" placeholder="yyyy-MM-dd" min="2014-01-01" max="2014-12-31" required />
-	  <div role="alert">
-	    <span class="error" ng-show="inputForm.date.$error.required">
-	      Date is required!
-	    </span>
-	    <span class="error" ng-show="inputForm.date.$error.date">
-	      Not a valid date!
-	    </span>
-	  </div>
-	</form>
-	<img ng-src="{{image}}">
-      </div>
+    <div class="container" ng-controller="galCtrl">
+      <h1>Das Titel</h1>
+      <form name="inputForm" id="input" ng-submit="updatePage()">
+	<button ng-click="prevDate()">&lt;</button>
+	<input name="date" type="date" ng-model="date" placeholder="yyyy-MM-dd" min="2014-01-01" max="2014-12-31" required />
+	<button ng-click="nextDate()">&gt;</button>
+	<div role="alert">
+	  <span class="error" ng-show="inputForm.date.$error.required">
+	    Date is required!
+	  </span>
+	  <span class="error" ng-show="inputForm.date.$error.date">
+	    Not a valid date!
+	  </span>
+	</div>
+      </form>
+      <img ng-src="{{image}}">
     </div>
   </body>
 </html>
