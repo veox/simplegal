@@ -1,7 +1,7 @@
 var simplegalApp = angular.module('simplegalApp', []);
 
 simplegalApp.controller('galCtrl', ['$scope', function($scope) {
-    // hack to disregard timezone
+    // double date hack to disregard timezone
     $scope.date = new Date(Date.UTC(2014, 11, 31));
     $scope.image = getImagePath($scope.date);
 
@@ -20,6 +20,18 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
     $scope.updatePage = function() {
 	// TODO: sanitise input
 	// TODO: check if image exists
+	// hack to update input text if button is pressed
+	$scope.date = new Date($scope.date);
 	$scope.image = getImagePath($scope.date);
+    }
+
+    $scope.prevDate = function() {
+	$scope.date.setUTCDate($scope.date.getUTCDate()-1);
+	$scope.updatePage();
+    }
+    
+    $scope.nextDate = function() {
+    	$scope.date.setUTCDate($scope.date.getUTCDate()+1);
+	$scope.updatePage();
     }
 }]);

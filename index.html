@@ -9,9 +9,10 @@
   <body>
     <div class="container" ng-controller="galCtrl">
       <h1>Das Titel</h1>
-      <form name="inputForm" id="input" ng-submit="updatePage()">
+      <form name="inputForm">
+	<button class="hidden" ng-click="updatePage()" />
 	<button ng-click="prevDate()">&lt;</button>
-	<input name="date" type="date" ng-model="date" placeholder="yyyy-MM-dd" min="2014-01-01" max="2014-12-31" required />
+	<input name="date" type="date" ng-model="date" placeholder="yyyy-MM-dd" min="2014-01-01" max="2018-12-31" required />
 	<button ng-click="nextDate()">&gt;</button>
 	<div role="alert">
 	  <span class="error" ng-show="inputForm.date.$error.required">

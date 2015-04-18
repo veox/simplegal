@@ -5,6 +5,10 @@ div.container {
     text-align: center;
 }
 
+button.hidden {
+    display: none;
+}
+
 input {
     width: 10em;
 }
