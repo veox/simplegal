@@ -5,13 +5,12 @@ A simple image gallery using AngularJS. Your basic HelloWorld with buttons.
 ## Installation
 
     npm install
-    bower install
 
 ## Serving
 
-Populate the `img` directory according to `img/README`.
+Populate the `img` directory according to `img/README`. Then:
 
-    python3 -m http.server
+    npm start
 
 ## License
 
