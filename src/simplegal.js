@@ -54,6 +54,10 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
 	// TODO: check if image exists
 	// hack to update input text if button is pressed
 	$scope.date = new Date($scope.date);
-	$scope.image = getImagePath($scope.date);
+	$scope.image = getImagePath($scope.date, 0);
+	$scope.image1 = getImagePath($scope.date, 1);
+	$scope.image2 = getImagePath($scope.date, 2);
+	$scope.image3 = getImagePath($scope.date, 3);
+	$scope.image4 = getImagePath($scope.date, 4);
     }
 }]);
