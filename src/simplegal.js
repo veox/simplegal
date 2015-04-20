@@ -16,6 +16,7 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
     // double date hack to disregard timezone
     $scope.date = new Date(Date.UTC(2014, 11, 31));
     $scope.image = getImagePath($scope.date, 0);
+    // FIXME: iter
     $scope.image1 = getImagePath($scope.date, 1);
     $scope.image2 = getImagePath($scope.date, 2);
     $scope.image3 = getImagePath($scope.date, 3);
@@ -55,6 +56,7 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
 	// hack to update input text if button is pressed
 	$scope.date = new Date($scope.date);
 	$scope.image = getImagePath($scope.date, 0);
+	// FIXME: iter
 	$scope.image1 = getImagePath($scope.date, 1);
 	$scope.image2 = getImagePath($scope.date, 2);
 	$scope.image3 = getImagePath($scope.date, 3);
