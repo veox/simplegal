@@ -16,6 +16,7 @@ simplegalApp.controller('galCtrl', ['$scope', function($scope) {
     // double date hack to disregard timezone
     $scope.date = new Date(Date.UTC(2014, 11, 31));
     $scope.image = getImagePath($scope.date);
+    $scope.image404 = 'img/404.jpeg';
 
     function getImagePath(date) {
 	date = date.toISOString();
